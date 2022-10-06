@@ -1,2 +1,2 @@
 # algoPractice
-#Solutions to algorithms.
+## Solutions to algorithms.
