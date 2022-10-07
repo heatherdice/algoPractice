@@ -30,5 +30,27 @@ function isPalindrome(x) {
 /* LeetCode #13: Roman to Integer
 Given a roman numeral, convert it to an integer. */
 function romanToInt(s) {
+    let conversion = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000};
+    let solution = 0;
+    for(let i = 0; i < s.length; i++) {
+        let current = s[i];
+        let currentVal = conversion[current];
+        let next = s[i + 1];
+        let nextVal = conversion[next];
 
+        if(currentVal >= nextVal || currentVal && !nextVal) {
+            solution += currentVal;
+        }
+        else if(currentVal < nextVal) {
+            solution -= currentVal;
+        }
+    }
+    return solution;
+};
+
+/* LeetCode #14: Longest Common Prefix
+Write a function to find the longest common prefix string amongst an array of strings
+If there is no common prefix, return an empty string. */
+function longestCommonPrefix(strs) {
+    
 };
