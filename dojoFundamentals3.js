@@ -57,7 +57,6 @@ function double(arr) {
     }
     return doubleArr;
 };
-console.log(double([1,2,3]));
 
 /* Count Positives
 Given an arr of nums, create a function to replace the last val with num of + vals.
@@ -127,7 +126,16 @@ function add7(arr) {
 Given an arr, write a function to reverse its values.
 Ex: reverse([3,1,6,4,2]) returns [2,4,6,1,3] */
 function reverse(arr) {
-
+    let j = arr.length-1;
+    for(let i = 0; i < arr.length/2; i++) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        if(j > 0) {
+            j--;
+        }
+    }
+    return arr;
 };
 
 /* Outlook: Negative
