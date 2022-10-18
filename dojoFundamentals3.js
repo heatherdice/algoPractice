@@ -144,7 +144,12 @@ containing all vals of previous arr, but negative.
 Do not simply multiply by -1.
 Ex: given [1,-3,5] return [-1,-3,-5] */
 function negative(arr) {
-
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > 0) {
+            arr[i] = arr[i] - (arr[i]*2);
+        }
+    }
+    return arr;
 };
 
 /* Always Hungry
