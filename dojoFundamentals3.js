@@ -144,12 +144,16 @@ containing all vals of previous arr, but negative.
 Do not simply multiply by -1.
 Ex: given [1,-3,5] return [-1,-3,-5] */
 function negative(arr) {
+    let newArr = [];
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > 0) {
-            arr[i] = arr[i] - (arr[i]*2);
+            newArr.push(arr[i] - (arr[i]*2));
+        }
+        else {
+            newArr.push(arr[i]);
         }
     }
-    return arr;
+    return newArr;
 };
 
 /* Always Hungry
@@ -171,7 +175,16 @@ Given arr, swap first and last, third and third-to-last, etc.
 Ex: [true,42,"Ada",2,"pizza"] becomes ["pizza",42,"Ada",2,true]
 Ex: [1,2,3,4,5,6] becomes [6,2,4,3,5,1] */
 function swapToCenter(arr) {
-
+    let j = arr.length;
+    for(let i = 0; i < arr.length/2; i++) {
+        if(i %2 == 0) {
+            let temp = arr[i];
+            arr[i] = arr[j-1];
+            arr[j-1] = temp;
+        }
+        j--;
+    }
+    return arr;
 };
 
 /* Scale the Array
