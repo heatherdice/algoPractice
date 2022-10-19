@@ -51,15 +51,16 @@ function letterGrade(score) {
     }
     console.log("Score: " + score, "Grade: " + grade);
 };
-letterGrade(56);
 
 /* More Accurate Grades
 Add - to scores in bottom % of grade, and + to scores in top % of grade.
 Ex: Given 88, console.log "Score: 88, Grade: B+" */
+let gradeMap = ['A+','A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'];
 function accurateGrade(score) {
-    let grade;
-    if(score >= 90) {
-        
-    }
-}
-
+    let index = Math.floor(30 - (score / 3.33));
+    let grade = gradeMap[index >= gradeMap.length ? gradeMap.length - 1 : index]; //learned a thing! see below for notes
+    console.log("Score: " + score, "Grade: " + grade);
+};
+/* learned a thing! notes:
+syntax for ternary operator in JS
+condition to test ? value if true : value if false */
