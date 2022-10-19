@@ -37,13 +37,13 @@ function letterGrade(score) {
     if(score >= 90) {
         grade = 'A';
     }
-    else if(score >= 80 && score <= 89) {
+    else if(score >= 80) {
         grade = 'B';
     }
-    else if(score >= 70 && score <= 79) {
+    else if(score >= 70) {
         grade = 'C';
     }
-    else if(score >= 60 && score <= 69) {
+    else if(score >= 60) {
         grade = 'D';
     }
     else {
@@ -51,9 +51,15 @@ function letterGrade(score) {
     }
     console.log("Score: " + score, "Grade: " + grade);
 };
+letterGrade(56);
 
 /* More Accurate Grades
 Add - to scores in bottom % of grade, and + to scores in top % of grade.
 Ex: Given 88, console.log "Score: 88, Grade: B+" */
-
+function accurateGrade(score) {
+    let grade;
+    if(score >= 90) {
+        
+    }
+}
 
