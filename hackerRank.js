@@ -34,3 +34,15 @@ function compareTriplets(aliceArr, bobArr) {
     }
     return [alicePts, bobPts];
 };
+
+/* A Very Big Sum
+Calculate and print sum of elements in an array, keeping in mind that ints
+may be very large. */
+function bigSum(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+};
+
