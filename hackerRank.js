@@ -46,3 +46,36 @@ function bigSum(arr) {
     return sum;
 };
 
+/* Plus Minus
+Given arr of ints, calculate ratios of elements which are positive, negative, and 0.
+Print decimal value of each fraction on new line with 6 places after decimal.
+Ex: arr = [1,1,0,-1,-1] Return: 0.400000, 0.400000, 0.200000 */
+function plusMinus(arr) {
+    let ratios = [];
+    let positive = 0;
+    let negative = 0;
+    let zero = 0;
+    arr.forEach(i => { //forEach - see line 75 for notes
+        if(i > 0) {
+            positive++;
+        }
+        else if(i < 0) {
+            negative++;
+        }
+        else {
+            zero++;
+        }
+    })
+    ratios.push(parseFloat(positive / arr.length).toFixed(6), 
+        parseFloat(negative / arr.length).toFixed(6), 
+        parseFloat(zero / arr.length).toFixed(6));
+    ratios.forEach(element => console.log(element)); //arrow function - see line 75 for notes
+};
+
+/* forEach: calls function for each element in array
+arrow function: allows for shorter function syntax, only works if function has 1 statement
+    Ex: hello = function() {
+        return "Hello World!";
+    };
+    w/ arrow function becomes
+    hello = () => "Hello World!";
