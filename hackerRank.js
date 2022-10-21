@@ -69,7 +69,7 @@ function plusMinus(arr) {
     ratios.push(parseFloat(positive / arr.length).toFixed(6), 
         parseFloat(negative / arr.length).toFixed(6), 
         parseFloat(zero / arr.length).toFixed(6));
-    ratios.forEach(element => console.log(element)); //arrow function - see line 75 for notes
+    ratios.forEach(element => console.log(element)); //arrow function - see line 76 for notes
 };
 
 /* forEach: calls function for each element in array
@@ -78,4 +78,21 @@ arrow function: allows for shorter function syntax, only works if function has 1
         return "Hello World!";
     };
     w/ arrow function becomes
-    hello = () => "Hello World!";
+    hello = () => "Hello World!"; */
+
+/* Staircase
+Create staircase of size n = 4 using # symbols and spaces. Last line is not preceded by spaces. */
+function staircase(n) {
+    for(let i = 0; i < n; i++) {
+        let step = '';
+        for(let j = n-1; j >= 0; j--) {
+            step += (j >= i+1) ? ' ' : '#';
+        }
+    console.log(step);
+    }
+};
+
+/* Mini-Max Sum
+Given 5 positive ints, find min and max vals that can be calculated by summing 4 of the ints.
+Then print respective min and max vals as single line of 2 space-separated long ints.
+Ex: arr = [1,3,5,7,9]; min sum is 1+3+5+7=16, max sum is 3+5+7+9=24. Function returns 16 24 */
