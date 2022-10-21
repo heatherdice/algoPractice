@@ -96,3 +96,6 @@ function staircase(n) {
 Given 5 positive ints, find min and max vals that can be calculated by summing 4 of the ints.
 Then print respective min and max vals as single line of 2 space-separated long ints.
 Ex: arr = [1,3,5,7,9]; min sum is 1+3+5+7=16, max sum is 3+5+7+9=24. Function returns 16 24 */
+function miniMaxSum(arr) {
+    
+}
