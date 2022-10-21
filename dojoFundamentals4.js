@@ -26,7 +26,13 @@ might occur today - or none. */
 During 14 weeks, student's IQ of 101 rose by .01 on the first day, then went up by
 an additional .02 on the 2nd day, then .03 more on the 3rd, etc. all the way until increasing
 by .98 on his 98th day. What is his final IQ? */
-
+function iqIncrease(iq, day) {
+    for(let i = 1; i < day; i++) {
+        iq += i*.01;
+    }
+    return iq;
+};
+console.log(iqIncrease(101,98));
 
 /* Letter Grade
 Write a function that assigns & prints a letter grade, given an integer representing
@@ -51,14 +57,22 @@ function letterGrade(score) {
     }
     console.log("Score: " + score, "Grade: " + grade);
 };
+//OR use ternary operator (see notes below for syntax)
+function letterGrade2(score) {
+    let grade = score >= 90 ? 'A' : 
+                score >= 80 ? 'B' :
+                score >= 70 ? 'C' :
+                score >= 60 ? 'D' : 'F';
+    console.log("Score: " + score, "Grade: " + grade);
+};
 
 /* More Accurate Grades
 Add - to scores in bottom % of grade, and + to scores in top % of grade.
 Ex: Given 88, console.log "Score: 88, Grade: B+" */
-let gradeMap = ['A+','A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'];
+let gradeMap2 = ['A+','A','A-','B+','B','B-','C+','C','C-','D+','D','D-','F'];
 function accurateGrade(score) {
     let index = Math.floor(30 - (score / 3.33));
-    let grade = gradeMap[index >= gradeMap.length ? gradeMap.length - 1 : index]; //learned a thing! see below for notes
+    let grade = gradeMap2[index >= gradeMap2.length ? gradeMap2.length - 1 : index];
     console.log("Score: " + score, "Grade: " + grade);
 };
 /* learned a thing! notes:
