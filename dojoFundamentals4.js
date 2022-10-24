@@ -13,7 +13,7 @@ function keepLastFew(arr, x) {
 Given 2 numbers, M & B in the equation Y = MX+B.
 Build function to return X-intercept. (X-intercept is value of X where Y = 0) */
 function mathHelp(m, b) {
-
+    return -b / m;
 };
 
 /* Poor Kenny
