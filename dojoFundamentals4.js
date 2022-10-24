@@ -2,7 +2,12 @@
 Given arr and num X, remove all except the last X elements.
 Return arr (changed and shorter). Ex: given ([2,4,6,8,10],3),
 change array to [6,8,10] and return it. */
-
+function keepLastFew(arr, x) {
+    while(arr.length > x) {
+            arr.shift();
+    }
+    return arr;
+};
 
 /* Math Help
 Given 2 numbers, M & B in the equation Y = MX+B.
