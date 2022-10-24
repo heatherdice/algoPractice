@@ -4,7 +4,7 @@ Return arr (changed and shorter). Ex: given ([2,4,6,8,10],3),
 change array to [6,8,10] and return it. */
 function keepLastFew(arr, x) {
     while(arr.length > x) {
-            arr.shift();
+        arr.shift();
     }
     return arr;
 };
