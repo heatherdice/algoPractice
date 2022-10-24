@@ -12,7 +12,9 @@ function keepLastFew(arr, x) {
 /* Math Help
 Given 2 numbers, M & B in the equation Y = MX+B.
 Build function to return X-intercept. (X-intercept is value of X where Y = 0) */
+function mathHelp(m, b) {
 
+};
 
 /* Poor Kenny
 Out of the last 100 days, there were 10 days with volcanoes, 15 with tsunamis,
