@@ -81,14 +81,12 @@ function fitFirstValue(arr) {
 Create a function that accepts a number of degrees in F and returns the equivalent temp in C.
 F = (9/5 * C) + 32. */
 function fahrenheitToCelsius(fDegrees) {
-    let celsius = (fDegrees - 32) * 5/9;
-    return celsius;
+    return (fDegrees - 32) * 5/9;
 };
 
 /* Celsius to Fahrenheit
 Create a function that accepts a number of degrees in C and returns the equivalent temp in F.
 C = F * 1.8 + 32 */
 function celsiusToFahrenheit(cDegrees) {
-    let fahrenheit = (cDegrees * 1.8 + 32);
-    return fahrenheit;
+    return (cDegrees * 1.8 + 32);
 };
