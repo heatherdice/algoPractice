@@ -76,6 +76,13 @@ function fitFirstValue(arr) {
     }
     return response;
 };
+//OR use ternary operator
+function fitFirstValue2(arr) {
+    let response = arr[0] > arr.length ? "Too big!"
+        : arr[0] < arr.length ? "Too small."
+        : "Just right!";
+    return response;
+};
 
 /* Fahrenheit to Celsius
 Create a function that accepts a number of degrees in F and returns the equivalent temp in C.
