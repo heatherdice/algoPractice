@@ -26,19 +26,22 @@ but a string or a boolean? */
 function firstPlusLength(arr) {
     return arr[0] + arr.length;
 };
-//If first val is str, response is string concat (ex: this5)
-//If first val is false, result is length; false = binary result of 0
-//If first val is true, result is length + 1; true = binary result of 1
+//OR use arrow function
+let firstPlusLength2 = arr => arr[0] + arr.length;
+
+/*If first val is str, response is string concat (ex: this5)
+If first val is false, result is length; false = binary result of 0
+If first val is true, result is length + 1; true = binary result of 1 */
 
 /* Values Greater than Second
 For [1,3,5,7,9,13], print values that are greater than its 2nd value.
 Return how many values this is. */
 let oddArr = [1,3,5,7,9,13];
-function greaterThanSecond(arr) {
+function greaterThanSecond(oddArr) {
     let result = 0;
-    for(let i = 0; i < arr.length; i++) {
-        if(arr[i] > arr[1]) {
-            console.log(arr[i]);
+    for(let i = 0; i < oddArr.length; i++) {
+        if(oddArr[i] > oddArr[1]) {
+            console.log(oddArr[i]);
             result++;
         }
     }
@@ -78,10 +81,9 @@ function fitFirstValue(arr) {
 };
 //OR use ternary operator
 function fitFirstValue2(arr) {
-    let response = arr[0] > arr.length ? "Too big!"
+    return arr[0] > arr.length ? "Too big!"
         : arr[0] < arr.length ? "Too small."
         : "Just right!";
-    return response;
 };
 
 /* Fahrenheit to Celsius
@@ -90,10 +92,14 @@ F = (9/5 * C) + 32. */
 function fahrenheitToCelsius(fDegrees) {
     return (fDegrees - 32) * 5/9;
 };
+//OR use arrow function
+let fahrenheitToCelsius2 = fDegrees => (fDegrees - 32) * 5/9;
 
 /* Celsius to Fahrenheit
 Create a function that accepts a number of degrees in C and returns the equivalent temp in F.
 C = F * 1.8 + 32 */
 function celsiusToFahrenheit(cDegrees) {
-    return (cDegrees * 1.8 + 32);
+    return cDegrees * 1.8 + 32;
 };
+//OR use arrow function
+let celsiusToFahrenheit2 = cDegrees => cDegrees * 1.8 + 32;
