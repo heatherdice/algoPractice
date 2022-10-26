@@ -47,6 +47,17 @@ function greaterThanSecond(oddArr) {
     }
     return result;
 };
+//OR use for-of (see below for notes)
+function greaterThanSecond2(oddArr) {
+    let result = 0;
+    for(let i of oddArr) {
+        if(i > oddArr[1]) {
+            console.log(i);
+            result++;
+        }
+    }
+    return result;
+};
 
 /* This Length, That Value
 Given two numbers, return array of length num1 with each value num2.
@@ -61,6 +72,7 @@ function lengthValue(num1, num2) {
     }
     return solutionArr;
 };
+
 
 /* Fit the First Value
 Given an array, if value at [0] is greater than arr.length, print "Too big!"
@@ -103,3 +115,9 @@ function celsiusToFahrenheit(cDegrees) {
 };
 //OR use arrow function
 let celsiusToFahrenheit2 = cDegrees => cDegrees * 1.8 + 32;
+
+/* learned a thing! notes below:
+for-of loop:
+    syntax:
+    for(variable of iterable) {code to be executed}
+    goes through every element in order; cannot modify iterable */
