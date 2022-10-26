@@ -20,7 +20,9 @@ function mathHelp(m, b) {
 Out of the last 100 days, there were 10 days with volcanoes, 15 with tsunamis,
 20 earthquakes, 25 blizzards, and 30 meteors. If these probabilities continue,
 write whatHappensToday() to print a day's outcome. */
+function whatHappensToday() {
 
+}
 
 /* What Really Happened?
 Change whatHappensToday() to create whatReallyHappensToday().
@@ -62,16 +64,17 @@ function letterGrade(score) {
     else {
         grade = 'F';
     }
-    console.log("Score: " + score, "Grade: " + grade);
+    console.log(`Score: ${score}`, `Grade: ${grade}`); //template literal (see line 89)
 };
-//OR use ternary operator (see notes below for syntax)
+//OR use ternary operator (see line 90)
 function letterGrade2(score) {
     let grade = score >= 90 ? 'A' : 
                 score >= 80 ? 'B' :
                 score >= 70 ? 'C' :
                 score >= 60 ? 'D' : 'F';
-    console.log("Score: " + score, "Grade: " + grade);
+    console.log(`Score: ${score}`, `Grade: ${grade}`);
 };
+letterGrade(76);
 
 /* More Accurate Grades
 Add - to scores in bottom % of grade, and + to scores in top % of grade.
@@ -83,5 +86,6 @@ function accurateGrade(score) {
     console.log("Score: " + score, "Grade: " + grade);
 };
 /* learned a thing! notes:
+template literal: notated w/ ` to create multiline strings, perform string interpolation
 syntax for ternary operator in JS
-condition to test ? value if true : value if false */
+    condition to test ? value if true : value if false */
