@@ -14,7 +14,7 @@ function makeItBig(arr) {
 Create a function that takes an arr of nums.
 Function should print lowest val in arr and return highest val in arr. */
 function printLoReturnHi(arr) {
-    console.log(Math.min(...arr));
+    console.log(Math.min(...arr)); //spread syntax: see line 200 for notes
     return Math.max(...arr);
 };
 //OR
@@ -196,3 +196,7 @@ function scaleArray(arr, num) {
     }
     return arr;
 };
+
+/* learned a thing! notes:
+spread syntax: ... expands literals like arrays into individual elements
+    in this case, ... expands iterable object (arr) into list to avoid NaN output
