@@ -40,6 +40,16 @@ function compareTriplets(aliceArr, bobArr) {
     }
     return [alicePts, bobPts];
 };
+//OR use forEach and nested ternary operator
+function compareTriplets2(aliceArr, bobArr) {
+    let alicePts = 0;
+    let bobPts = 0;
+    aliceArr.forEach((element, i) => {
+        element > bobArr[i] ? alicePts++ :
+        element < bobArr[i] ? bobPts++ : ""
+    })
+    return [alicePts, bobPts];
+};
 
 /* A Very Big Sum
 Calculate and print sum of elements in an array, keeping in mind that ints
