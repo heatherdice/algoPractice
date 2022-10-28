@@ -61,6 +61,12 @@ function bigSum(arr) {
     }
     return sum;
 };
+//OR use forEach
+function bigSum2(arr) {
+    let sum = 0;
+    arr.forEach(element => sum += element);
+    return sum;
+};
 
 /* Plus Minus
 Given arr of ints, calculate ratios of elements which are positive, negative, and 0.
