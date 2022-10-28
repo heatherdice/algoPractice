@@ -15,6 +15,12 @@ function sumElements(arr) {
     }
     return sum;
 };
+//OR use forEach
+function sumElements2(arr) {
+    let sum = 0;
+    arr.forEach(element => sum += element);
+    return sum;
+};
 
 /* Compare the Triplets
 Find comparison points between triplet a & b by comparing a[0] w/ b[0],
@@ -98,4 +104,12 @@ Then print respective min and max vals as single line of 2 space-separated long 
 Ex: arr = [1,3,5,7,9]; min sum is 1+3+5+7=16, max sum is 3+5+7+9=24. Function returns 16 24 */
 function miniMaxSum(arr) {
     
-}
+};
+
+/* Birthday Cake Candles
+Cake will have one candle for each year of child's age.
+Child can only blow out tallest candles. Count how many are tallest.
+Ex: candles = [4,4,1,3]; Max height candles are 4 unites high. There are 2 of them, so return 2. */
+function birthdayCakeCandles(candles) {
+    
+};
