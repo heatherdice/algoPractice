@@ -77,7 +77,7 @@ function plusMinus(arr) {
     let positive = 0;
     let negative = 0;
     let zero = 0;
-    arr.forEach(i => { //forEach - see line 75 for notes
+    arr.forEach(i => { //forEach - see below for notes
         if(i > 0) {
             positive++;
         }
@@ -91,7 +91,7 @@ function plusMinus(arr) {
     ratios.push(parseFloat(positive / arr.length).toFixed(6), 
         parseFloat(negative / arr.length).toFixed(6), 
         parseFloat(zero / arr.length).toFixed(6));
-    ratios.forEach(element => console.log(element)); //arrow function - see line 76 for notes
+    ratios.forEach(element => console.log(element)); //arrow function - see below for notes
 };
 
 /* forEach: calls function for each element in array
