@@ -17,7 +17,7 @@ function printLoReturnHi(arr) {
     console.log(Math.min(...arr)); //spread syntax: see line 200 for notes
     return Math.max(...arr);
 };
-//OR
+//OR without the use of built-ins or spread syntax
 function printLoReturnHi2(arr) {
     let max = arr[0];
     let min = arr[0];
@@ -55,6 +55,12 @@ function double(arr) {
     for(let i = 0; i < arr.length; i++) {
         doubleArr.push(arr[i] * 2);
     }
+    return doubleArr;
+};
+//OR use forEach
+function double(arr) {
+    let doubleArr = [];
+    arr.forEach(element => doubleArr.push(element * 2)); //forEach: see notes below
     return doubleArr;
 };
 
@@ -155,6 +161,14 @@ function negative(arr) {
     }
     return newArr;
 };
+//OR use forEach with ternary operator
+function negative2(arr) {
+    let newArr = [];
+    arr.forEach(element =>  {
+        element > 0 ? newArr.push(element - (element * 2)) : newArr.push(element);
+    })
+    return newArr;
+};
 
 /* Always Hungry
 Given an arr, print "yummy" each time val = "food"
@@ -199,4 +213,7 @@ function scaleArray(arr, num) {
 
 /* learned a thing! notes:
 spread syntax: ... expands literals like arrays into individual elements
-    in this case, ... expands iterable object (arr) into list to avoid NaN output
+    in this case, ... expands iterable object (arr) into list to avoid NaN output 
+forEach: iterates through EVERY SINGLE ITEM in array with no stops
+    syntax: array.forEach(parameterName => execution) 
+        (can have multiple parameters; multiple params separated by ,) */
