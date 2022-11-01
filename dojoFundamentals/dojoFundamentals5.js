@@ -23,3 +23,46 @@ function factorial(num) {
     }
     return product;
 };
+
+/* Star Art
+Write a function drawLeftStars(num) that accepts a number and prints that many asterisks.
+Write a function drawRightStars(num) that prints 75 chars total. Stars should build from right side.
+    Last num chars should be *'s, the other 75 should be spaces.
+Write function drawCenteredStars(num) that prints 75 chars total. The *'s should be centered in the 75.
+    The middle num chars should be *'s, the rest of the 75 spaces. */
+function drawLeftStars(num) {
+    let stars = '';
+    while(num > 0) {
+        stars += '*';
+        num--;
+    }
+    return stars;
+};
+function drawRightStars(num) {
+    let stars = '';
+    let spaces = '';
+    let otherNum = 75 - num;
+    while(otherNum > 0) {
+        spaces += ' ';
+        otherNum--;
+    }
+    while(num > 0) {
+        stars += '*';
+        num--;
+    }
+    return spaces + stars;
+};
+function drawCenteredStars(num) {
+    let stars = '';
+    let spaces = '';
+    let otherNum = (75 - num)/2;
+    while(otherNum > 0) {
+        spaces += ' ';
+        otherNum--;
+    }
+    while(num > 0) {
+        stars += '*';
+        num--;
+    }
+    return spaces + stars + spaces;
+};
