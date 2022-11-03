@@ -66,3 +66,48 @@ function drawCenteredStars(num) {
     }
     return spaces + stars + spaces;
 };
+
+/* Character Art
+From the previous problem, derive the following that accepts and draws the given characters, not just asterisks:
+- drawLeftChars(num,char)
+- drawRightChars(num,char)
+- drawCenteredChars(num,char)
+For all 3 of these, assume that "char" is a str w/ length of 1. */
+function drawLeftChars(num,char) {
+    let arr = [];
+    while(num > 0) {
+        arr.push(char);
+        num--;
+    }
+    return arr.join('');
+};
+//75 chars total, w/ 75-num = number of spaces; right-justify chars
+function drawRightChars(num,char) {
+    let charArr = [];
+    let spaceArr = [];
+    let spaceNum = 75 - num;
+    while(num > 0) {
+        charArr.push(char);
+        num--;
+    }
+    while(spaceNum > 0) {
+        spaceArr.push(' ');
+        spaceNum--;
+    }
+    return spaceArr.join('') + charArr.join('');
+};
+//75 chars total, w/ 75-num = number of spaces; center-justify chars
+function drawCenteredChars(num,char) {
+    let charArr = [];
+    let spaceArr = [];
+    let spaceNum = (75 - num)/2;
+    while(num > 0) {
+        charArr.push(char);
+        num--;
+    }
+    while(spaceNum > 0) {
+        spaceArr.push(' ');
+        spaceNum--;
+    }
+    return spaceArr.join('') + charArr.join('') + spaceArr.join('');
+};
