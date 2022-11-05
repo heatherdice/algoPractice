@@ -129,3 +129,20 @@ Ex: candles = [4,4,1,3]; Max height candles are 4 unites high. There are 2 of th
 function birthdayCakeCandles(candles) {
     
 };
+
+/* Sales by Match
+Given arr of ints representing color of each sock, determine how many pairs of socks with matching colors
+there are. */
+function salesByMatch(n,arr) {
+    let hashmap = {};
+    let count = 0;
+    for(let i = 0; i < arr.length; i++) {
+        hashmap[arr[i]] ? hashmap[arr[i]]++ : hashmap[arr[i]] = 1
+    }
+    for(let key in hashmap) {
+        count += Math.floor(hashmap[key] / 2)
+    }
+    return count;
+}
+console.log(salesByMatch(7,[1,2,1,2,1,3,2]))
+
