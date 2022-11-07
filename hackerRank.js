@@ -119,7 +119,10 @@ Given 5 positive ints, find min and max vals that can be calculated by summing 4
 Then print respective min and max vals as single line of 2 space-separated long ints.
 Ex: arr = [1,3,5,7,9]; min sum is 1+3+5+7=16, max sum is 3+5+7+9=24. Function returns 16 24 */
 function miniMaxSum(arr) {
-    
+    arr.sort((a,b) => a-b); //ensures that arr is always in ascending order
+    let min = arr[0] + arr[1] + arr[2] + arr[3];
+    let max = arr[1] + arr[2] + arr[3] + arr[4];
+    return min + ' ' + max;
 };
 
 /* Birthday Cake Candles
@@ -144,5 +147,22 @@ function salesByMatch(n,arr) {
     }
     return count;
 }
-console.log(salesByMatch(7,[1,2,1,2,1,3,2]))
 
+/* Counting Sort 1
+Create an int arr whose index range covers the entire range of values in arr to sort. 
+Each time a value occurs in the original arr, increment the counter at that index. 
+At the end, run through your counting arr, printing the val of each non-zero valued index that num of times.
+Ex: arr = [1,1,3,2,1]; all vals are in range [0...3] so create arr of 0's, result = [0,0,0,0] 
+Results of each iteration:
+i	arr[i]	result
+0	1	[0, 1, 0, 0]
+1	1	[0, 2, 0, 0]
+2	3	[0, 2, 0, 1]
+3	2	[0, 2, 1, 1]
+4	1	[0, 3, 1, 1]
+Frequency array is [0,3,1,1]. These vals can be used to create the sorted arr as well: [1,1,1,2,3] */
+function countingSort1(arr){
+    let countArr = Array(100).fill(0);
+    arr.forEach(element => {countArr[element] = countArr[element] + 1});
+    return countArr;
+};
