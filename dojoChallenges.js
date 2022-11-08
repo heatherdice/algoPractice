@@ -107,3 +107,18 @@ function negatives(arr) {
     }
     return arr;
 };
+
+/* Max/Min/Avg: Given an arr with multiple vals, write a function that returns a new arr that only contains
+the max, min, and avg vals of the original arr. Example: [1,5,10,-2] will return [10, -2, 3.5] */
+function maxMinAvg(arr) {
+    let solution = [];
+    let max = Math.max(...arr);
+    let min = Math.min(...arr);
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    let avg = sum / arr.length;
+    solution.push(max, min, avg)
+    return solution;
+};
