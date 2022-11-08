@@ -96,3 +96,14 @@ function squares2(arr) {
     }
     return arr;
 };
+
+/* Negatives: Given an arr w/ multiple vals, write a function that replaces any negative nums in arr
+w/ val of 0. When function is done, arr should contain no negative vals. */
+function negatives(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < 0) {
+            arr[i] = 0;
+        }
+    }
+    return arr;
+};
