@@ -131,3 +131,15 @@ function swap(arr) {
     arr[arr.length - 1] = temp;
     return arr;
 };
+
+/* Number to String: Write a function that takes an arr of nums & replaces any negative vals within the arr
+with the string 'Dojo'. Example: [-1,-3,2] becomes ['Dojo', 'Dojo', 2] */
+function numberToString(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < 0) {
+            arr[i] = 'Dojo';
+        }
+    }
+    return arr;
+};
+console.log(numberToString([-1,-3,2]));
