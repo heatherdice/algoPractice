@@ -62,9 +62,37 @@ function average(arr) {
 function oddArr(arr) {
     let oddNums = [];
     for(i of arr) {
-        if(i %2 != 0) {
+        if(i %2 !== 0) {
             oddNums.push(i);
         }
     }
     return oddNums;
+};
+
+/* Greater than Y: Given val of Y, write a function that takes an arr & returns num of vals > Y.
+Example: arr = [1,3,5,7] and Y = 3, function returns 2. */
+function greaterThanY(arr, Y) {
+    let count = 0;
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] > Y) {
+            count++;
+        }
+    }
+    return count;
+};
+
+/* Squares: Given an arr with multiple vals, write a function that replaces each val in the arr
+with the product of the original val multiplied by itself. Example: [1,5,10,-2] becomes [1,25,100,4] */
+function squares(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * arr[i];
+    }
+    return arr;
+};
+//OR use Math.pow
+function squares2(arr) {
+    for(let i = 0; i < arr.length; i++) {
+        arr[i] = Math.pow(arr[i], 2);
+    }
+    return arr;
 };
