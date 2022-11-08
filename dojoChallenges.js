@@ -57,3 +57,14 @@ function average(arr) {
     }
     return sum / (arr.length);
 };
+
+// Array odd: Write a function that would return an arr of all the odd nums between 1 to 50
+function oddArr(arr) {
+    let oddNums = [];
+    for(i of arr) {
+        if(i %2 != 0) {
+            oddNums.push(i);
+        }
+    }
+    return oddNums;
+};
