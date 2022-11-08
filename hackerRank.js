@@ -122,7 +122,7 @@ function miniMaxSum(arr) {
     arr.sort((a,b) => a-b); //ensures that arr is always in ascending order
     let min = arr[0] + arr[1] + arr[2] + arr[3];
     let max = arr[1] + arr[2] + arr[3] + arr[4];
-    return min + ' ' + max;
+    console.log(min + ' ' + max);
 };
 
 /* Birthday Cake Candles
@@ -130,8 +130,31 @@ Cake will have one candle for each year of child's age.
 Child can only blow out tallest candles. Count how many are tallest.
 Ex: candles = [4,4,1,3]; Max height candles are 4 unites high. There are 2 of them, so return 2. */
 function birthdayCakeCandles(candles) {
-    
+    candles.sort((a,b) => b-a); //ensures that candles arr is in descending order
+    let count = 1;
+    for(let i = 0; i < candles.length; i++) {
+        if(candles[i] == candles[i+1]) {
+            count++;
+        }
+    }
+    return count;
 };
+//OR solution that HackerRank accepted:
+function birthdayCakeCandles(candles) {
+    let max = Math.max(...candles);
+    let count = 0;
+    for(let i = 0; i < candles.length; i++) {
+        if(candles[i] === max) {
+            count++;
+        }
+    }
+    return count;
+};
+console.log(birthdayCakeCandles([4,4,1,3]));
+
+/* Time Conversion
+Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
+Example: s = '12:01:00AM' returns '00:01:00'
 
 /* Sales by Match
 Given arr of ints representing color of each sock, determine how many pairs of socks with matching colors
