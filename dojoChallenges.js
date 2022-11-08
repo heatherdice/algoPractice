@@ -1,4 +1,4 @@
-// Write a function that returns an array with all numbers between 1 & 255
+// Get 1 to 255: Write a function that returns an array with all numbers between 1 & 255
 function numList() {
     let arr = [];
     for(let x = 1; x < 256; x++) {
@@ -7,7 +7,7 @@ function numList() {
     return arr;
 };
 
-// Write a function that would get the sum of all even numbers from 1 to 1000
+// Get even 1000: Write a function that would get the sum of all even numbers from 1 to 1000
 function sumEvenNums() {
     let sum = 0;
     for(let i = 0; i < 1001; i++) {
@@ -18,7 +18,7 @@ function sumEvenNums() {
     return sum;
 };
 
-// Write a function that returns the sum of all odd numbers from 1 to 5000
+// Sum odd 5000: Write a function that returns the sum of all odd numbers from 1 to 5000
 function sumOddNums() {
     let sum = 0;
     for(let i = 0; i < 5001; i++) {
@@ -29,7 +29,7 @@ function sumOddNums() {
     return sum;
 };
 
-// Write a function that returns the sum of all values within an array
+// Iterate an array: Write a function that returns the sum of all values within an array
 function sumArrNums(arr) {
     let sum = 0;
     for(let i = 0; i < arr.length; i++) {
@@ -38,7 +38,7 @@ function sumArrNums(arr) {
     return sum;
 };
 
-// Given an arr w/ multiple vals, write a function that returns the max num in the arr
+// Find max: Given an arr w/ multiple vals, write a function that returns the max num in the arr
 function maxVal(arr) {
     let max = arr[0];
     for(let i = 1; i < arr.length; i++) {
@@ -47,4 +47,13 @@ function maxVal(arr) {
         }
     }
     return max;
+};
+
+// Find average: Given an arr w/ multiple vals, write a function that returns the avg of the vals in the arr
+function average(arr) {
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / (arr.length);
 };
