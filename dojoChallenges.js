@@ -122,3 +122,12 @@ function maxMinAvg(arr) {
     solution.push(max, min, avg)
     return solution;
 };
+
+/* Swap Values: Write a function that will swap the 1st & last vals of any given arr. Default min length of arr
+is 2. Ex: [1,5,10,-2] will become [-2,5,10,1] */
+function swap(arr) {
+    let temp = arr[0];
+    arr[0] = arr[arr.length-1];
+    arr[arr.length - 1] = temp;
+    return arr;
+};
