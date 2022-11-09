@@ -140,7 +140,7 @@ function birthdayCakeCandles(candles) {
     return count;
 };
 //OR solution that HackerRank accepted:
-function birthdayCakeCandles(candles) {
+function birthdayCakeCandles2(candles) {
     let max = Math.max(...candles);
     let count = 0;
     for(let i = 0; i < candles.length; i++) {
@@ -150,11 +150,29 @@ function birthdayCakeCandles(candles) {
     }
     return count;
 };
-console.log(birthdayCakeCandles([4,4,1,3]));
 
 /* Time Conversion
 Given a time in 12-hour AM/PM format, convert it to military (24-hour) time.
-Example: s = '12:01:00AM' returns '00:01:00'
+Example: s = '12:01:00AM' returns '00:01:00' */
+function timeConversion(time12) {
+    if(time12.includes('PM')) {
+        let newTime = time12.replace(/PM/, ''); //regex - replace 2+ characters
+        let hour = parseInt(newTime.substring(0,2));
+        if(hour != 12) {
+            hour += 12;
+        }
+        return hour + newTime.substring(2);
+    }
+    if(time12.includes('AM')) {
+        let newTime = time12.replace(/AM/, '');
+        let hour = newTime.substring(0,2);
+        if(hour == 12) {
+            hour = '00';
+        }
+        return hour + newTime.substring(2);
+    }
+};
+console.log(timeConversion('12:45:54PM'));
 
 /* Sales by Match
 Given arr of ints representing color of each sock, determine how many pairs of socks with matching colors
