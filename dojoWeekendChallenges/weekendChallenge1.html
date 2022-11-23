@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekend Challenge 1: Quiz Game</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function quizGame() {
+            let name = prompt("Welcome to the Quiz Game! Please enter your name.");
+            let questions = [
+                `${name}: what is the last letter in the Greek Alphabet?`, //omega
+                `${name}: what type of dog is 'Handsome Dan,' the mascot of Yale University?`, //bulldog
+                `${name}: what is the airspeed velocity of an unladen swallow (number only)?`, //24
+                `${name}: how many notes are there on a standard grand piano?`, //88
+                `${name}: what disease can be caused by a lack of Vitamin C?` //scurvy
+            ]
+            let score = 0;
+            let answers = 0;
+            alert(`Hello, ${name}, nice to meet you! Let's play the Quiz Game!`);
+            let question1 = prompt(questions[0]);
+            switch(question1) {
+                case "omega":
+                    alert("Correct!");
+                    score++;
+                    answers++;
+                    break;
+                default:
+                    alert("Incorrect.");
+                    answers++;
+            }
+            let question2 = prompt(questions[1]);
+            switch(question2) {
+                case "bulldog":
+                    alert("Correct!");
+                    score++;
+                    answers++;
+                    break;
+                default:
+                    alert("Incorrect.");
+                    answers++;
+            }
+            let question3 = prompt(questions[2]);
+            switch(question3) {
+                case "24":
+                    alert("Correct!");
+                    score++;
+                    answers++;
+                    break;
+                default:
+                    alert("Incorrect.");
+                    answers++;
+            }
+            let question4 = prompt(questions[3]);
+            switch(question4) {
+                case "88":
+                    alert("Correct!");
+                    score++;
+                    answers++;
+                    break;
+                default:
+                    alert("Incorrect.");
+                    answers++;
+            }
+            let question5 = prompt(questions[4]);
+            switch(question5) {
+                case "scurvy":
+                    alert("Correct!");
+                    score++;
+                    answers++;
+                    break;
+                default:
+                    alert("Incorrect.");
+                    answers++;
+            }
+            alert(
+                `Contestant: ${name} 
+                Questions answered: ${answers} 
+                Questions correct: ${score}`
+            );
+        };
+        quizGame();
+        // ability to cancel/quit early & see results
+</script>
+</body>
+</html>
