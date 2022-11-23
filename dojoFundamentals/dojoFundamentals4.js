@@ -23,21 +23,22 @@ write whatHappensToday() to print a day's outcome. */
 function whatHappensToday() {
     let today = Math.random() * 100;
     let whatHappens = today <= 10 ? "volcano" :
-                        today <= 15 ? "tsunami" :
-                        today <= 20 ? "earthquake" :
-                        today <= 25 ? "blizzard" :
-                        today <= 30 ? "meteor" : "";
+                        today <= 25 ? "tsunami" :
+                        today <= 45 ? "earthquake" :
+                        today <= 60 ? "blizzard" :
+                        today <= 90 ? "meteor" : "";
     return whatHappens;
 };
-console.log(whatHappensToday());
-
 /* What Really Happened?
 Change whatHappensToday() to create whatReallyHappensToday().
 In this new function, test for each disaster independently instead of assuming
 exactly one disaster will happen. In other words, with this new function, all five
 might occur today - or none. */
-
-
+function whatReallyHappensToday() {
+    //put probabilities and events in map, iterate w/ forEach and get new random w/ every loop
+    //see if new random is less than probability of value at that loop
+    //if so, print disaster value from loop
+}
 /* Soaring IQ
 During 14 weeks, student's IQ of 101 rose by .01 on the first day, then went up by
 an additional .02 on the 2nd day, then .03 more on the 3rd, etc. all the way until increasing
