@@ -49,3 +49,22 @@ def thisLenThatVal(num1,num2):
         for num in range(num1): # num1 is int (non-iterable), must make it a range
             arr.append(num2)
         return arr
+
+# Fit the First Value
+# Given an array, if value at [0] is greater than arr.length, print "Too big!"
+# If value at [0] is less than arr.length, print "Too small."
+# Otherwise, print "Just right!"
+def fitFirstVal(arr):
+    if arr[0] > len(arr):
+        print("Too big!")
+    elif arr[0] < len(arr):
+        print("Too small!")
+    else:
+        print("Just right.")
+
+# Fahrenheit to Celsius
+# Create a function that accepts a number of degrees in F and returns the equivalent temp in C.
+# F = (9/5 * C) + 32.
+def fahrenheitToCelsius(fDegrees):
+    print((fDegrees - 32) * 5/9)
+
