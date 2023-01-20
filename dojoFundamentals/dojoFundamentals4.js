@@ -36,6 +36,14 @@ exactly one disaster will happen. In other words, with this new function, all fi
 might occur today - or none. */
 function whatReallyHappensToday() {
     //put probabilities and events in map, iterate w/ forEach and get new random w/ every loop
+    let events = new Map([
+        ["volcano", .10],
+        ["tsunami", .25],
+        ["earthquake", .45],
+        ["blizzard", .60],
+        ["meteor", .90]
+    ]);
+    events.forEach()
     //see if new random is less than probability of value at that loop
     //if so, print disaster value from loop
 }
