@@ -68,3 +68,8 @@ def fitFirstVal(arr):
 def fahrenheitToCelsius(fDegrees):
     print((fDegrees - 32) * 5/9)
 
+# Celsius to Fahrenheit
+# Create a function that accepts a number of degrees in C and returns the equivalent temp in F.
+# C = F * 1.8 + 32
+def celsiusToFahrenheit(cDegrees):
+    print(cDegrees * 1.8 + 32)
