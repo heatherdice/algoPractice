@@ -25,3 +25,5 @@ print(printAndReturn([9,13]))
 def firstPlusLength(arr):
     return arr[0] + len(arr)
 print(firstPlusLength([0,1,2,3,4,5]))
+print(firstPlusLength(["happy",9,10])) # error: cannot concatenate str to int
+print(firstPlusLength([True,5,9])) # True = 1, so 1+3=4
