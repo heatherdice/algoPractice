@@ -15,5 +15,13 @@ print(countdown(5))
 # Print the first value, and return the second.
 def printAndReturn(arr):
     print(arr[0])
-    return(arr[1])
-printAndReturn([9,13])
+    return arr[1]
+print(printAndReturn([9,13]))
+
+# First Plus Length
+# Given an array, return the sum of the first value in the array,
+# plus the array's length. What happens if the array's first value is not a number,
+# but a string or a boolean?
+def firstPlusLength(arr):
+    return arr[0] + len(arr)
+print(firstPlusLength([0,1,2,3,4,5]))
