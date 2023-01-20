@@ -37,4 +37,15 @@ def greaterThanSecond(oddArr):
             x += 1
             result += 1
     return result
-print(greaterThanSecond(oddArr))
+
+# This Length, That Value
+# Given two numbers, return array of length num1 with each value num2.
+# Print "Jinx!" if they are the same.
+def thisLenThatVal(num1,num2):
+    arr = []
+    if num1 == num2:
+        return "Jinx!"
+    else:
+        for num in range(num1): # num1 is int (non-iterable), must make it a range
+            arr.append(num2)
+        return arr
