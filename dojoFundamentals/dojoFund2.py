@@ -9,3 +9,11 @@ def countdown(int):
         int -= 1
     return arr
 print(countdown(5))
+
+# Print and Return
+# Your function will receive an array with two numbers.
+# Print the first value, and return the second.
+def printAndReturn(arr):
+    print(arr[0])
+    return(arr[1])
+printAndReturn([9,13])
