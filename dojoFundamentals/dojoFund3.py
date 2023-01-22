@@ -8,4 +8,11 @@ def biggieSize(arr):
     return arr
 print(biggieSize([-1,3,5,-5]))
 
-# 
+# Print Low, Return High
+# Create a function that takes an arr of nums.
+# Function should print lowest val in arr and return highest val in arr.
+def prntLowReturnHigh(arr):
+    arr.sort()
+    print(arr[0])
+    return arr[-1]
+
