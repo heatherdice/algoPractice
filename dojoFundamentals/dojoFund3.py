@@ -45,3 +45,14 @@ def countPositives(arr):
             count += 1
     arr.append(count)
     return arr
+
+# Evens and Odds
+# Create a function that accepts an arr. 
+# Every time that arr has 3 odd values in a row, print "That's odd!"
+# Every time the arr has 3 evens in a row, print "Even more so!"
+def evensAndOdds(arr):
+    for num in range(len(arr)):
+        if arr[num] %2 != 0 and arr[num+1] %2 != 0 and arr[num+2] %2 != 0:
+            print("That's odd!")
+        if arr[num] %2 != 0 and arr[num+1] %2 != 0 and arr[num+2] %2 == 0:
+            print("Even more so!")
