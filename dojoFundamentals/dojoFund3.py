@@ -6,7 +6,6 @@ def biggieSize(arr):
         if arr[num] > 0:
             arr[num] = "big"
     return arr
-print(biggieSize([-1,3,5,-5]))
 
 # Print Low, Return High
 # Create a function that takes an arr of nums.
@@ -16,3 +15,12 @@ def prntLowReturnHigh(arr):
     print(arr[0])
     return arr[-1]
 
+# Print One, Return Another
+# Build a function that takes an arr of nums.
+# Function should print the second-to-last val in arr,
+# and return first odd val in arr.
+def prntOneReturnAnother(arr):
+    print(arr[-2])
+    for num in range(len(arr)):
+        if arr[num] %2 != 0:
+            return arr[num]
