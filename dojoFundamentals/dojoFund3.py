@@ -65,3 +65,11 @@ def incrementSeconds(arr):
             arr[num] += 1
         print(arr[num])
     return arr
+
+# Previous Lengths
+# Given an arr containing strings, replace each str with a num.
+# Num = length of str at previous arr index. Return arr.
+def previousLengths(arr):
+    for str in range(len(arr)):
+        arr[str] = len(arr[str])
+    return arr
