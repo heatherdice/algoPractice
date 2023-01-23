@@ -24,3 +24,13 @@ def prntOneReturnAnother(arr):
     for num in range(len(arr)):
         if arr[num] %2 != 0:
             return arr[num]
+
+# Double Vision
+# Given an arr, create a function to return a new arr where
+# each val in the original has been doubled.
+# Calling double([1,2,3]) should return [2,4,6] without changing original.
+def doubleVision(arr):
+    newArr = []
+    for num in range(len(arr)):
+        newArr.append(arr[num]*2)
+    return newArr
