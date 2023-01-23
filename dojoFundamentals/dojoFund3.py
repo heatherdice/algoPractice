@@ -34,3 +34,14 @@ def doubleVision(arr):
     for num in range(len(arr)):
         newArr.append(arr[num]*2)
     return newArr
+
+# Count Positives
+# Given an arr of nums, create a function to replace the last val with num of + vals.
+# Ex: countPositives([-1,1,1,1]) changes arr to [-1,1,1,3].
+def countPositives(arr):
+    count = 0
+    for num in range(len(arr)):
+        if arr[num] > 0:
+            count += 1
+    arr.append(count)
+    return arr
