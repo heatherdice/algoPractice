@@ -56,3 +56,12 @@ def evensAndOdds(arr):
             print("That's odd!")
         if arr[num] %2 != 0 and arr[num+1] %2 != 0 and arr[num+2] %2 == 0:
             print("Even more so!")
+
+# Increment the Seconds
+# Given arr, add 1 to odd elements, console.log all values, and return arr.
+def incrementSeconds(arr):
+    for num in range(len(arr)):
+        if arr[num] %2 != 0:
+            arr[num] += 1
+        print(arr[num])
+    return arr
