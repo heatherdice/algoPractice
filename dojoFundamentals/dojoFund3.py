@@ -128,3 +128,11 @@ def swapTowardCenter(arr):
         if x %2 == 0: # skip odd indeces
             arr[x],arr[maxIndex-x] = arr[maxIndex-x],arr[x] # replace val @ index w/ val @ index from end
     return arr
+
+# Scale the Array
+# Given array arr and number num, multiply each arr value by num.
+# Return the changed arr.
+def scaleArr(arr, num):
+    for x in range(len(arr)):
+        arr[x] *= num
+    return arr
