@@ -94,3 +94,28 @@ def rvrsArray(arr):                 # regular .reverse() method returns None bec
     result = list(reversed(arr))    # using list(reversed()) takes an iterator, reverses it, and returns the result
     return result                   # does not mutate original list; can reassign variable if wanting to change list
 
+# Outlook: Negative
+# Given an arr, create and return a new one 
+# containing all vals of previous arr, but negative.
+# Do not simply multiply by -1.
+# Ex: given [1,-3,5] return [-1,-3,-5]
+def outlookNegative(arr):
+    newArr = []
+    for num in range(len(arr)):
+        if arr[num] > 0:
+            newArr.append(arr[num] - (arr[num]*2))
+        else:
+            newArr.append(arr[num])
+    return newArr
+
+# Always Hungry
+# Given an arr, print "yummy" each time val = "food"
+# If no arr vals are "food" print "I'm hungry" once.
+def alwaysHungry(arr):
+    for x in arr:
+        if x == "food":
+            print("yummy")
+    if arr.count("food") == 0:
+        print("I'm hungry")
+
+        
