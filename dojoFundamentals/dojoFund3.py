@@ -86,3 +86,11 @@ def addSevenToMost(arr):
     for newNum in range(len(newArr)):
         newArr[newNum] += 7
     return newArr
+
+# Reverse Array
+# Given an arr, write a function to reverse its values.
+# Ex: reverse([3,1,6,4,2]) returns [2,4,6,1,3]
+def rvrsArray(arr):                 # regular .reverse() method returns None because it mutates original list
+    result = list(reversed(arr))    # using list(reversed()) takes an iterator, reverses it, and returns the result
+    return result                   # does not mutate original list; can reassign variable if wanting to change list
+
