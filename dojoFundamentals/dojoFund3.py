@@ -118,4 +118,13 @@ def alwaysHungry(arr):
     if arr.count("food") == 0:
         print("I'm hungry")
 
-        
+# Swap Toward the Center
+# Given arr, swap first and last, third and third-to-last, etc.
+# Ex: [true,42,"Ada",2,"pizza"] becomes ["pizza",42,"Ada",2,true]
+# Ex: [1,2,3,4,5,6] becomes [6,2,4,3,5,1]
+def swapTowardCenter(arr):
+    maxIndex = len(arr)-1 # stores last index in arr
+    for x in range(int((maxIndex+1)/2)): # iterates through only 1st 1/2 of arr; need int because /2 will create float at some point
+        if x %2 == 0: # skip odd indeces
+            arr[x],arr[maxIndex-x] = arr[maxIndex-x],arr[x] # replace val @ index w/ val @ index from end
+    return arr
