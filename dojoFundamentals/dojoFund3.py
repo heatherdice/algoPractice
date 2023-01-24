@@ -74,3 +74,15 @@ def previousLengths(arr):
         arr[x] = len(arr[x-1])
     arr[0] = 0
     return arr
+
+# Add Seven to Most
+# Build function that, given an arr, returns new arr with all values 
+# except first, adding 7 to each.
+def addSevenToMost(arr):
+    newArr = []
+    for num in arr:
+        newArr.append(num)
+    newArr.remove(newArr[0])
+    for newNum in range(len(newArr)):
+        newArr[newNum] += 7
+    return newArr
