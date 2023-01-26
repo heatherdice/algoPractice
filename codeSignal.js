@@ -46,5 +46,17 @@ An n-interesting polygon is obtained by taking the n - 1-interesting polygon
 and appending 1-interesting polygons to its rim, side by side. (See CodeSignal
 for example images.) */
 function shapeArea(n) {
-
+    // multiples of 4
+    // loop going up n times
+    let result = 1;
+    if (n === 1) { // === also checks data type, better for debugging
+        return result;
+    }
+    for (let i = 0; i < n; i++) {
+        result += i*4;
+        console.log("RESULT:",result);
+    }
+    return result;
 };
+// n = 2 output = 5; n = 3 output = 13; n = 3 output = 13; n = 4 output = 25
+shapeArea(4)
