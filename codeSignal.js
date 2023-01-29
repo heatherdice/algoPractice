@@ -1,10 +1,10 @@
-/* CodeSignal #1: add
+/* add
 Write a function that returns the sum of two numbers. */
 function solution(param1, param2) {
     return param1 + param2;
 };
 
-/* CodeSignal #2: centuryFromYear
+/* centuryFromYear
 Given a year, return the century it is in. 
 The first century spans from the year 1 up to and including the year 100, 
 the second - from the year 101 up to and including the year 200, etc. */
@@ -12,7 +12,7 @@ function solution(year) {
     return Math.ceil(year/100);
 };
 
-/* CodeSignal #3: checkPalindrome
+/* checkPalindrome
 Given the string, check if it is a palindrome. */
 function solution(inputString) {
     for(let i = 0; i < inputString.length / 2; i++) {
@@ -23,7 +23,7 @@ function solution(inputString) {
     return true;
 };
 
-/* CodeSignal #4: adjascentElementsProduct
+/* adjascentElementsProduct
 Given an array of integers, 
 find the pair of adjacent elements that has the largest product 
 and return that product. */
@@ -39,7 +39,7 @@ function adjascentElementsProduct(inputArray) {
     return num;
 };
 
-/* CodeSignal #5: shapeArea
+/* shapeArea
 Find the area of a polygon for a given n.
 Ex: a 1-interesting polygon is just a square with a side of length 1.
 An n-interesting polygon is obtained by taking the n - 1-interesting polygon
@@ -58,5 +58,21 @@ function shapeArea(n) {
     }
     return result;
 };
-// n = 2 output = 5; n = 3 output = 13; n = 3 output = 13; n = 4 output = 25
-shapeArea(4)
+
+/* Make Array Consecutive 2
+Arrange statues from smallest to largest so that each statue will be bigger than the previous one by exactly 1.
+May need additional statues to accomplish this. Determine min num of additional statues needed. */
+function makeArrConsecutive(statues) { // statues = arr of +ints
+    //sort statues arr in ascending order
+    statues.sort(function(a,b){return a - b});
+    // placeholder variable to be returned
+    let count = 0;
+    //iterate through sorted arr
+    for(let i = 0; i < statues.length-1; i++) {
+        if(statues[i] - statues[i+1] != -1) {
+            count += statues[i+1] - statues[i] - 1;
+        }
+    }
+    return count;
+}
+console.log(makeArrConsecutive([6,2,3,8]))
