@@ -3,10 +3,8 @@
 # Return arr (changed and shorter). Ex: given ([2,4,6,8,10],3),
 # change array to [6,8,10] and return it.
 def onlyKeepLastFew(arr, x): # arr = list, x = int
-    arrayLength = len(arr)
-    while arrayLength > x:
+    while len(arr) > x:
         arr.pop(0)
-        arrayLength-=1
     return arr
 
 # Math Help
@@ -14,3 +12,9 @@ def onlyKeepLastFew(arr, x): # arr = list, x = int
 # Build function to return X-intercept. (X-intercept is value of X where Y = 0)
 def mathHelp(m,b):
     return -b / m
+
+# Poor Kenny
+# Out of the last 100 days, there were 10 days with volcanoes, 15 with tsunamis,
+# 20 earthquakes, 25 blizzards, and 30 meteors. If these probabilities continue,
+# write whatHappensToday() to print a day's outcome.
+# def whatHappensToday():
