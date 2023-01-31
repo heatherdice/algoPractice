@@ -8,3 +8,9 @@ def onlyKeepLastFew(arr, x): # arr = list, x = int
         arr.pop(0)
         arrayLength-=1
     return arr
+
+# Math Help
+# Given 2 numbers, M & B in the equation Y = MX+B.
+# Build function to return X-intercept. (X-intercept is value of X where Y = 0)
+def mathHelp(m,b):
+    return -b / m
