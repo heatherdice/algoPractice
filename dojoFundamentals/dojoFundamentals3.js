@@ -116,6 +116,7 @@ function previousLengths(arr) {
     arr[0] = 0;
     return arr;
 };
+console.log(previousLengths(['hi','dog','tree','happy']))
 
 /* Add Seven to Most
 Build function that, given an arr, returns new arr with all values 
