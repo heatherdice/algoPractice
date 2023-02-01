@@ -27,3 +27,12 @@ def compareTriplets(a,b):
         elif b[i] > a[i]:
             bob+=1
     return [alice,bob]
+
+# A Very Big Sum
+# Calculate and print sum of elements in an array, keeping in mind that ints
+# may be very large.
+def veryBigSum(arr):
+    sum = 0
+    for i in range(len(arr)):
+        sum += arr[i]
+    return sum
