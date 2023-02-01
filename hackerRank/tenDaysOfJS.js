@@ -16,3 +16,13 @@ function performOperation(secondInteger,secondDecimal,secondString) {
     console.log(firstDecimal+Number(secondDecimal)); // ditto above
     console.log(firstString+' '+secondString); // hackerRank included ' ' in their secondString
 }
+
+/* Arithmetic Operations
+Write 2 functions to find the area & perimeter of a rectangle. */
+function getArea(l,w) {
+    return l*w;
+}
+function getPerimeter(l,w) {
+    return 2(l+w);
+}
+
