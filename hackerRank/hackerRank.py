@@ -36,3 +36,8 @@ def veryBigSum(arr):
     for i in range(len(arr)):
         sum += arr[i]
     return sum
+
+# Plus Minus
+# Given arr of ints, calculate ratios of elements which are positive, negative, and 0.
+# Print decimal value of each fraction on new line with 6 places after decimal.
+# Ex: arr = [1,1,0,-1,-1] Return: 0.400000, 0.400000, 0.200000
