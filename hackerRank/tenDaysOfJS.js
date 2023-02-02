@@ -60,3 +60,31 @@ function circleDimensions(r) {
     console.log(PI*(Math.pow(r,2))); // area; Math.pow(num,exponent) gives number to the exponent power
     console.log(2*PI*r); // perimeter
 }
+
+/* Conditional Statements: If-Else
+Function has 1 perameter, score, denoting num of points student earned on exam. Must return letter corresponding to her grade
+according to the following rules:  grade = A if 25<score<=30, grade = B if 20<score<=25, grade = C if 15<score<=20, grade = D if
+10<score<=15, grade = E if 5<score<=10, grade = F if 0<=score<=5. Function must return val of grade. */
+function examGrade(score) {
+    let grade;
+    if(score > 25 && score <= 30) {
+        grade = "A";
+    }
+    else if(score > 20 && score <= 25) {
+        grade = "B";
+    }
+    else if(score > 15 && score <= 20) {
+        grade = "C";
+    }
+    else if(score > 10 && score <= 15) {
+        grade = "D";
+    }
+    else if(score > 5 && score <= 10) {
+        grade = "E";
+    }
+    else {
+        grade = "F";
+    }
+    return grade;
+}
+
