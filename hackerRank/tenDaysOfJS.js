@@ -51,3 +51,12 @@ function factorial(n) {
     }
     return factorial;
 }
+
+/* Let and Const
+Declare a const var, PI, and assign it the value Math.PI. Read a num, r, denoting the radius of a circle from stdin. Use PI & r to
+calculate area & perimeter of a circle having radius r. Print area as 1st line of output & print perimeter as 2nd line of output. */
+function circleDimensions(r) {
+    const PI = Math.PI; // Math.PI gives exact pi
+    console.log(PI*(Math.pow(r,2))); // area; Math.pow(num,exponent) gives number to the exponent power
+    console.log(2*PI*r); // perimeter
+}
