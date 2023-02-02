@@ -40,3 +40,14 @@ function vowelsAndConsonants(s) { // s = str
         }
     }
 }
+
+/* Functions
+Implement a function named factorial that has one parameter: an int, n. It must return the value of n! (i.e., n factorial) */
+function factorial(n) {
+    let factorial = 1; // set to 1 because setting to 0 would produce 0 as answer every time (n*0=0)
+    while(n > 1) { // set to 1 to prevent n*0
+        factorial *= n;
+        n--; // decrementing to prevent endless loop
+    }
+    return factorial;
+}
