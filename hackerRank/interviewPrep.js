@@ -46,3 +46,42 @@ function jumpingOnClouds(c) { // c = arr of binary ints
     }
     return minJumps;
 }
+
+/* Repeated String
+Str (s) of lowercase English letters repeated infinitely many times. Given int (n), find & print num of letter a's
+in 1st n letters of infinite str. */
+function repeatedString(s, n) { // s = str, n = int
+    // placeholder for new str w/ length of at least n letters; concatenate once to get a str w/ length
+    let newStr = s;
+    let i = 0;
+    while(i <= Math.floor(n/s.length)) { // take original string & add on n/string length more times
+        newStr+=s;
+        i++;
+    }
+    let count = 0;
+    for(let i = 0; i < n; i++) {
+        if(newStr[i] == 'a') {
+            count++;
+        }
+    }
+    return count;
+}
+// alternate solution (works best for big numbers but is also more efficient)
+function repeatedString2(s,n) {
+    let aOne = 0; // initialize variable for how many a's are in one string before it's repeated
+    let length = s.length; // setting variable in code allows it to be changed everywhere in code if needs to be changed
+    let repeat = Math.floor(n/length); // number of times string is repeating, rounded down to nearest int
+    for(const char of s) {
+        if(char === "a") {
+            aOne++;
+        }
+    }
+    let count = aOne * repeat; // number of a's in single str * how many times str repeats
+    let remainder = n%length; // get remainder of initial str length
+    for(let i = 0; i <= remainder-1; i++) { // reamainder-1 because of starting at index 0
+        if(s[i] === "a") {
+            count++;
+        }
+    }
+    return count;
+}
