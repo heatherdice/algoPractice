@@ -23,7 +23,19 @@
 
 # Operators
 # given the meal $, tip %, & tax % for a meal, find & print the meal's total cost. Round the result to the nearest int.
-def solve(meal_cost, tip_percent, tax_percent):
-    total_cost = (meal_cost + ((meal_cost/100) * tip_percent) + ((meal_cost/100) * tax_percent))
-    return round(total_cost)
-print(solve(12.00, 20, 8))
+# def solve(meal_cost, tip_percent, tax_percent):
+#     total_cost = (meal_cost + ((meal_cost/100) * tip_percent) + ((meal_cost/100) * tax_percent))
+#     return round(total_cost)
+# print(solve(12.00, 20, 8))
+
+# Intro to Conditional Statements
+# Given an int, n, perform the following conditional statements:
+# if n is odd, print Weird
+# if n is even & in the inclusive range of 2 to 5, print Not Weird
+# if n is even & in the inclusive range of 6 to 20, print Weird
+# if n is even & greater than 20, print Not Weird
+def weird_or_not(N):
+    if N %2 != 0: print("Weird")
+    if N %2 == 0 and N in range(2,6): print("Not Weird")
+    if N %2 == 0 and N in range(6,21): print("Weird")
+    if N %2 == 0 and N > 20: print("Not Weird")
