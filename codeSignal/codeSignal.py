@@ -10,3 +10,9 @@ import math
 def solution(year):
     century = math.ceil(year/100)
     return century
+
+# checkPalindrome
+# Given the string, check if it is a palindrome.
+def solution3(inputString):
+    reversed_string = inputString[::-1] # slice statement: start at end of string, end at pos 0, move w/ step -1
+    return reversed_string == inputString
