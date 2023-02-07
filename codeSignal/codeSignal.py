@@ -33,7 +33,7 @@ def solution(inputArray):
 # An n-interesting polygon is obtained by taking the n - 1-interesting polygon
 # and appending 1-interesting polygons to its rim, side by side. (See CodeSignal
 # for example images.)
-def solution5(n):
+def solution(n):
     result = 1
     if n == 1:
         return result
@@ -42,3 +42,17 @@ def solution5(n):
         result += (i*4)
         i+=1
     return result
+
+# Make Array Consecutive 2
+# Arrange given list from smallest to largest. Insert missing numbers to get a list of numbers which each increment by 1.
+# Return how many numbers needed to be added to the list to accomplish this.
+def solution(statues):
+    statues.sort()
+    count = 0
+    i = 0
+    while i < len(statues)-1:
+        if statues[i+1] != statues[i]+1:
+            statues.insert(i+1,statues[i]+1)
+            count+=1
+        i+=1
+    return count
