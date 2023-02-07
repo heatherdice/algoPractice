@@ -1,4 +1,4 @@
-# Hello World
+# Day 0: Hello World
 # Read a full line of input from stdin & save it to dynamically typed var.
 # Print string literal saying "Hello World" to stdout.
 # Write line of code that prints content of dynamically typed var to stdout.
@@ -6,7 +6,7 @@
 # print('Hello, World.')
 # print(input_string)
 
-# Data Types
+# Day 1: Data Types
 # Vars i, d, & s are already declared & initialized for you. You must:
 # - declare 3 vars: one of type int, on of type double, & one of type str
 # - read 3 lines of input from stdin & initialize your 3 vars
@@ -21,13 +21,13 @@
 # print(d+d2)
 # print(s+s2)
 
-# Operators
+# Day 2: Operators
 # given the meal $, tip %, & tax % for a meal, find & print the meal's total cost. Round the result to the nearest int.
 # def solve(meal_cost, tip_percent, tax_percent):
 #     total_cost = (meal_cost + ((meal_cost/100) * tip_percent) + ((meal_cost/100) * tax_percent))
 #     return round(total_cost)
 
-# Intro to Conditional Statements
+# Day 3: Intro to Conditional Statements
 # Given an int, n, perform the following conditional statements:
 # if n is odd, print Weird
 # if n is even & in the inclusive range of 2 to 5, print Not Weird
@@ -39,7 +39,7 @@
 #     if N %2 == 0 and N in range(6,21): print("Weird")
 #     if N %2 == 0 and N > 20: print("Not Weird")
 
-# Class vs. Instance
+# Day 4: Class vs. Instance
 # Write a Person class with an instance variable, age, & a constructor that takes int initialAge, as a parameter
 # Constructor must assign initialAge to age after confirming the argument passed as initialAge is not negative
 # If negative argument is passed as initialAge, constructor should set age to 0 & print "age is not valid, setting age to 0"
@@ -74,7 +74,7 @@
 # John = Person(20)
 # John.display_info().yearPasses().amIOld()
 
-# Loops
+# Day 5: Loops
 # Given an int, n, print its 1st 10 multiples. Each multiple n*i where 1<=i<=10 should be printed on a new line
 # in the form n*i=result
 def multiples(n):
@@ -83,3 +83,19 @@ def multiples(n):
         result = n * i
         print(f"{n} x {i} = {result}")
         i+=1
+
+# Day 6: Let's Review
+# Given a string s, of length n that is indexed from 0 to n-1, print its even-indexed & odd-indexed characters as 2 space-separated
+# strings on a single line.
+def string_indexes(s):
+    even_string = ""
+    odd_string = ""
+    for i in range(len(s)):
+        if i %2 == 0:
+            even_string+=s[i]
+            i+=1
+        else: 
+            odd_string+=s[i]
+            i+=1
+    print(f"{even_string} {odd_string}")
+# above function gives us the answer we want, but isn't accepted by HR because inputs are different
