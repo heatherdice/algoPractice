@@ -19,7 +19,7 @@ def solution(inputString):
 
 # adjacentElementsProduct
 # Given an arr of ints, find pair of adjacent elements w/ largest product & return that product.
-def solution4(inputArray):
+def solution(inputArray):
     product_list = []
     for i in range(len(inputArray)-1):
         product = inputArray[i]*inputArray[i+1]
@@ -27,3 +27,18 @@ def solution4(inputArray):
     product_list.sort()
     return product_list[-1]
 
+# shapeArea
+# Find the area of a polygon for a given n.
+# Ex: a 1-interesting polygon is just a square with a side of length 1.
+# An n-interesting polygon is obtained by taking the n - 1-interesting polygon
+# and appending 1-interesting polygons to its rim, side by side. (See CodeSignal
+# for example images.)
+def solution5(n):
+    result = 1
+    if n == 1:
+        return result
+    i = 0
+    while i < n:
+        result += (i*4)
+        i+=1
+    return result
