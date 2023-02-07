@@ -13,6 +13,17 @@ def solution(year):
 
 # checkPalindrome
 # Given the string, check if it is a palindrome.
-def solution3(inputString):
+def solution(inputString):
     reversed_string = inputString[::-1] # slice statement: start at end of string, end at pos 0, move w/ step -1
     return reversed_string == inputString
+
+# adjacentElementsProduct
+# Given an arr of ints, find pair of adjacent elements w/ largest product & return that product.
+def solution4(inputArray):
+    product_list = []
+    for i in range(len(inputArray)-1):
+        product = inputArray[i]*inputArray[i+1]
+        product_list.append(product)
+    product_list.sort()
+    return product_list[-1]
+
