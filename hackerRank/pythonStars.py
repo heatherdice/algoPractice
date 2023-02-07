@@ -14,12 +14,26 @@ def is_leap(year):
 # Initialize your list & read in the value of n followed by n lines of commands, where each command will be of these 7
 # types: insert, print, remove, append, sort, pop, reverse. Iterate through each command in order & perform the 
 # corresponding operation on your list.
-# N = int(input())
-# my_list = []
-# for i in range(N+1):
-#     my_list.append(i)
-#     i+=1
-# print(my_list)
+N = int(input())
+my_list = []
+for num in range(N):
+    num = list(input().split())
+    if num[0] == 'insert':
+        my_list.insert(int(num[1]),int(num[2]))
+    elif num[0] == 'print':
+        print(my_list)
+    elif num[0] == 'remove':
+        my_list.remove(int(num[1]))
+    elif num[0] == 'append':
+        my_list.append(int(num[1]))
+    elif num[0] == 'sort':
+        my_list.sort()
+    elif num[0] == 'pop':
+        my_list.pop()
+    elif num[0] == 'reverse':
+        my_list.reverse()
+
+
 
 # List Comprehensions
 # Given 3 ints (x,y,&z) representing dimensions of cuboid along with int n. Print list of all possible coords given by 
@@ -39,6 +53,5 @@ def runner_up_score(A):
         if sorted_list[x] == sorted_list[x+1]:
             sorted_list.pop(x)
         else: x+=1
-    print(sorted_list[1])
 
 
