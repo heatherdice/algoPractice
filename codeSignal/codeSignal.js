@@ -75,4 +75,14 @@ function makeArrConsecutive(statues) { // statues = arr of +ints
     }
     return count;
 }
-console.log(makeArrConsecutive([6,2,3,8]))
+
+/* almostIncreasingSequence
+Given a sequence of ints as an arr, determine whether it is possible to obtain a strictly increasing sequence by removing
+no more than 1 element from the arr. Function returns true or false. */
+function almostIncreasingSequence(sequence) { // sequence = arr of ints
+    // iterate through arr
+    for(let i = 0; i < arr.length-1; i++) {
+        // check if next int is more than current
+        if()
+    }
+}
