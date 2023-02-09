@@ -14,26 +14,24 @@ def is_leap(year):
 # Initialize your list & read in the value of n followed by n lines of commands, where each command will be of these 7
 # types: insert, print, remove, append, sort, pop, reverse. Iterate through each command in order & perform the 
 # corresponding operation on your list.
-N = int(input())
-my_list = []
-for num in range(N):
-    num = list(input().split())
-    if num[0] == 'insert':
-        my_list.insert(int(num[1]),int(num[2]))
-    elif num[0] == 'print':
-        print(my_list)
-    elif num[0] == 'remove':
-        my_list.remove(int(num[1]))
-    elif num[0] == 'append':
-        my_list.append(int(num[1]))
-    elif num[0] == 'sort':
-        my_list.sort()
-    elif num[0] == 'pop':
-        my_list.pop()
-    elif num[0] == 'reverse':
-        my_list.reverse()
-
-
+# N = int(input())
+# my_list = []
+# for num in range(N):
+#     num = list(input().split())
+#     if num[0] == 'insert':
+#         my_list.insert(int(num[1]),int(num[2]))
+#     elif num[0] == 'print':
+#         print(my_list)
+#     elif num[0] == 'remove':
+#         my_list.remove(int(num[1]))
+#     elif num[0] == 'append':
+#         my_list.append(int(num[1]))
+#     elif num[0] == 'sort':
+#         my_list.sort()
+#     elif num[0] == 'pop':
+#         my_list.pop()
+#     elif num[0] == 'reverse':
+#         my_list.reverse()
 
 # List Comprehensions
 # Given 3 ints (x,y,&z) representing dimensions of cuboid along with int n. Print list of all possible coords given by 
@@ -54,4 +52,16 @@ def runner_up_score(A):
             sorted_list.pop(x)
         else: x+=1
 
-
+# Tuples
+# Given an int, n, & n space-separated ints, create a tuple, t, of those n ints. Then compute & print result of hash(t).
+# Note: hash() is a built-in, and does not need to be imported.
+# n = int(input())
+def tuple_hash(n):
+    list_placeholder = []
+    for num in range(1,n+1):
+        list_placeholder.append(num)
+        print("CURRENT LIST:", list_placeholder)
+    t = tuple(list_placeholder)
+    print("TUPLE:", t)
+    print(hash(t))
+tuple_hash(2) # doesn't work on HackerRank, unsure why
