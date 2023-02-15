@@ -88,3 +88,27 @@ function examGrade(score) {
     return grade;
 }
 
+/* Conditional Statements: Switch
+The getLetter(s) function has 1 perameter, a string (s) consisting of lowercase English alphabetic letters. Must return A, B, C, or D
+depending on the following criteria:
+- if 1st char in s is in the set {a,e,i,o,u}, return A
+- if 1st char in s is in the set {b,c,d,f,g}, return B
+- if 1st char in s is in the set {h,j,k,l,m}, return C
+- if 1st char in s is in the set {n,p,q,r,s,t,v,w,x,y,z}, return D */
+function getLetter(s) {
+    let letter = s[0];
+    let A = new Set(['a','e','i','o','u']);
+    let B = new Set(['b','c','d','f','g']);
+    let C = new Set(['h','j','k','l','m']);
+    let D = new Set(['n','p','q','r','s','t','v','w','x','y','z']);
+    switch(true) {
+        case A.has(letter):
+            return "A";
+        case B.has(letter):
+            return "B";
+        case C.has(letter):
+            return "C";
+        case D.has(letter):
+            return "D";
+    }
+}
