@@ -112,3 +112,14 @@ function getLetter(s) {
             return "D";
     }
 }
+
+/* Arrays
+Write a function that returns the second-largest number in an array. */
+function secondLargestNum(arr) {
+    arr.sort(function(a,b){return b-a});
+    for(let i = 0; i <= arr.length; i++) {
+        if(arr[i] != arr[i+1]) {
+            return arr[i+1];
+        }
+    }
+}
