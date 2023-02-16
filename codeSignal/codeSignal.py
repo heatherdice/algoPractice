@@ -56,3 +56,47 @@ def solution(statues):
             count+=1
         i+=1
     return count
+
+# almostIncreasingSequence
+# Given a sequence of ints as an arr, determine whether it is possible to obtain a strictly increasing sequence by removing
+# no more than 1 element from the arr. Function returns true or false.
+# def solution9(sequence):
+#     count = 0
+#     i = 1
+#     while i <= len(sequence):
+#         if len(sequence) == i:
+#             i-=1
+#             if sequence[i-1] >= sequence[i]-1:
+#                 sequence.pop(i)
+#                 count+=1
+#                 if count > 1:
+#                     return False
+#             break
+#         if sequence[i-1] == sequence[i] or sequence[i-1] > sequence[i]-1 or sequence[i-2] > sequence[i-1]:
+#             sequence.pop(i)
+#             count+=1
+#             if count > 1:
+#                 return False
+#         i+=1
+#     return True
+# print(solution9([1,2,5,3,5])) # True
+
+def solution10(sequence):
+    count = 0
+    i = 0
+    while i <= len(sequence)-1:
+        if len(sequence)-1 == i:
+            i-=1
+            if sequence[i+1] <= sequence[i]:
+                sequence.pop(i+1)
+                count+=1
+                if count > 1:
+                    return False
+        if i > 0 and sequence[i-1] >= sequence[i] or sequence[i+1] <= sequence[i]: # does not consider if sequence[0]>sequence[1]
+            sequence.pop(i+1)
+            count+=1
+        if count > 1:
+            return False
+        i+=1
+    return True
+print(solution10([1,2,1,2]))
