@@ -51,6 +51,39 @@ function romanToInt(s) {
 /* LeetCode #14: Longest Common Prefix
 Write a function to find the longest common prefix string amongst an array of strings
 If there is no common prefix, return an empty string. */
-function longestCommonPrefix(strs) {
-    
+function longestCommonPrefix(arr) {
+    let prefix = '';                                //set prefix to empty string
+    let i = 0;                                      //i = current index of char in str
+    while(i >= 0) {                                  //iterate through chars in str
+        for(let j = 0; j < arr.length - 1; j++) {   //iterate through length of array, stop before end
+            if() {               //if letter1 & letter2 are the same, proceed to next step
+                if(j === arr.length - 2) {          /* if j = 2nd to last index in arr,
+                                                    then all previous chars at this index of i
+                                                    were passed in the above conditional; we know that 
+                                                    this char is the same for all str in arr */                    
+                    prefix += letter1;         //add letter1 to prefix str
+                }
+            }
+            else {                                  //if letter1 & letter2 are not the same,
+                return prefix;                      //return prefix str
+            }
+        }
+        i++;                                        //increment current index of char in str
+    }
+};
+
+/* LeetCode #20: Valid Parentheses
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', 
+determine if the input string is valid. An input string is valid if:
+1. Open brackets must be closed by the same type of brackets.
+2. Open brackets must be closed in the correct order.
+3. Every close bracket has a corresponding open bracket of the same type. */
+function isValid(s) {
+    let pairs = {'(':')', '[':']', '{':'}'}
+    for(let i = 0; i < s.length; i++) {
+        let current = s[i];
+        let next = s[i + 1];
+        let pairKey = pairs[]
+        if()
+    }
 };
