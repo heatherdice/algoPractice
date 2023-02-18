@@ -123,3 +123,17 @@ function secondLargestNum(arr) {
         }
     }
 }
+
+/* Try, Catch, and Finally
+Try to reverse string s using split, reverse, and join methods. If an exception is thrown, catch it & print the contents of the 
+exception's message on a new line. Print s on a new line. If no exception is thrown, this should be the reversed string. If an 
+exception is thrown, this should be the original string. */
+function reverseString(s) {
+    try {
+        console.log(s.split("").reverse().join(""));
+    }
+    catch (e) {
+        console.log(e.message);
+        console.log(s);
+    }
+}
