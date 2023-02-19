@@ -153,3 +153,17 @@ function isPositive(a) {
         throw new Error("Negative Error");
     }
 }
+
+/* Create a Rectangle Object
+Complete the function rectangle, which has 2 params, a & b. It must return an object modeling a rectangle that has the
+following properties: length (=a), width (=b), perimeter (=a+b), area (=a*b). */
+function rectangle(a,b) {
+    let shape = {
+        length : a,
+        width : b,
+        perimeter : 2*(a+b),
+        area : a*b
+    }
+    return shape;
+}
+
