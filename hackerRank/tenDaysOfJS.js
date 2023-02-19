@@ -137,3 +137,19 @@ function reverseString(s) {
         console.log(s);
     }
 }
+
+/* Throw
+Complete the isPositive function. It has 1 int param, a. If a > 0, it must return the string "YES". Otherwise,
+it must return an error according to the following rules: if a = 0, throw an error w/ message = Zero Error.
+If a < 0, throw an error w/ message = Negative Error. */
+function isPositive(a) {
+    if(a > 0) {
+        return "YES";
+    }
+    else if(a == 0) {
+        throw new Error("Zero Error");
+    }
+    else if(a < 0) {
+        throw new Error("Negative Error");
+    }
+}
