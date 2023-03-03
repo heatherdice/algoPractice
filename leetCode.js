@@ -50,27 +50,24 @@ function romanToInt(s) {
 
 /* LeetCode #14: Longest Common Prefix
 Write a function to find the longest common prefix string amongst an array of strings
-If there is no common prefix, return an empty string. */
+If there is no common prefix, return an empty string.
+DID NOT SOLVE THIS ON MY OWN. Solution taken from a posted LeetCode solution. I was stumped so rather than solve on my own,
+I decided to find a solution and learn from it. Below is that solution as well as my explanations for why it works. */
 function longestCommonPrefix(arr) {
-    let prefix = '';                                //set prefix to empty string
-    let i = 0;                                      //i = current index of char in str
-    while(i >= 0) {                                  //iterate through chars in str
-        for(let j = 0; j < arr.length - 1; j++) {   //iterate through length of array, stop before end
-            if() {               //if letter1 & letter2 are the same, proceed to next step
-                if(j === arr.length - 2) {          /* if j = 2nd to last index in arr,
-                                                    then all previous chars at this index of i
-                                                    were passed in the above conditional; we know that 
-                                                    this char is the same for all str in arr */                    
-                    prefix += letter1;         //add letter1 to prefix str
-                }
-            }
-            else {                                  //if letter1 & letter2 are not the same,
-                return prefix;                      //return prefix str
-            }
+    let i = 1;                              // set i to 1 to start iteration w/ 2nd array element
+    let prefix = arr[0];                    // prefix set to 1st element in array; this allows comparison between array elements
+    while(i < arr.length) {                 // iterate through array while i is less than the length of the array
+        if(!arr[i].startsWith(prefix)) {    // if element in array does not start with first element in array
+            prefix = prefix.slice(0,-1);    // remove last letter in prefix (first element in array) and compare again
         }
-        i++;                                        //increment current index of char in str
+        else {
+            i++;                            // increase i by 1 to move to next element in the array and compare again
+        }
     }
-};
+    return prefix;
+}
+console.log(longestCommonPrefix(['flower','flow','flight']));
+
 
 /* LeetCode #20: Valid Parentheses
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', 
@@ -78,12 +75,12 @@ determine if the input string is valid. An input string is valid if:
 1. Open brackets must be closed by the same type of brackets.
 2. Open brackets must be closed in the correct order.
 3. Every close bracket has a corresponding open bracket of the same type. */
-function isValid(s) {
-    let pairs = {'(':')', '[':']', '{':'}'}
-    for(let i = 0; i < s.length; i++) {
-        let current = s[i];
-        let next = s[i + 1];
-        let pairKey = pairs[]
-        if()
-    }
-};
+// function isValid(s) {
+//     let pairs = {'(':')', '[':']', '{':'}'}
+//     for(let i = 0; i < s.length; i++) {
+//         let current = s[i];
+//         let next = s[i + 1];
+//         let pairKey = pairs[]
+//         if()
+//     }
+// };
